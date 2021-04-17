@@ -96,6 +96,8 @@ components:
           type: string
         price:
           type: number
+        smell:
+          type: boolean
     Pets:
       type: array
       items:
