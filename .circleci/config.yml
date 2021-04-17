@@ -1,8 +1,18 @@
 version: 2.1
 
 jobs:
-  build:
+  request-generate-api-client:
     machine: true
     steps:
       - checkout
       - run: sh request-generate-api-client.sh
+
+workflows:
+  version: 2
+  request-generate-api-client:
+    jobs:
+      - request-generate-api-client:
+          filters:
+            branches:
+              only:
+                - develop
