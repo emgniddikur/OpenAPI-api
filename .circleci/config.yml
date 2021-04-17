@@ -1,0 +1,8 @@
+version: 2.1
+
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+      - run: sh request-generate-api-client.sh
